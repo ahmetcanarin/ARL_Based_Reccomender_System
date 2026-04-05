@@ -1,6 +1,3 @@
-> ⚠️ This project is designed with production-oriented practices in mind.  
-> Large datasets are excluded intentionally to maintain repository efficiency and scalability.
-
 ## 📂 Data Access
 
 The dataset used in this project is based on the **Online Retail II** dataset, which contains transactional data from a UK-based online retail company.
