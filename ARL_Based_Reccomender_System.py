@@ -7,6 +7,8 @@ pd.set_option("display.expand_frame_repr", False)
 pd.set_option("display.max_rows", 10)
 
 # Load dataset (transaction-level retail data)
+df_ = pd.read_excel("online_retail_II.xlsx", sheet_name=2010-2011)
+df_.to_pickle("Online_Retail_II_2010-11.pickle")
 df = pd.read_pickle("Online_Retail_II_2010-11.pickle")
 
 # Initial data inspection
