@@ -42,15 +42,60 @@ Before modeling, the dataset undergoes several preprocessing steps to ensure ana
 
 ---
 
-### 🧠 Why the Dataset is Not Included
+### 🤖 Recommendation System (Association Rule Learning)
 
-Including large raw datasets directly in repositories is generally discouraged because:
+After preprocessing, an **Association Rule Learning (ARL)**–based recommendation system is developed using the Apriori algorithm.
 
-- It increases repository size unnecessarily  
-- It reduces cloning and usability performance  
-- It violates common industry practices  
+The goal is to identify products that are frequently purchased together and generate **data-driven product recommendations**.
 
-Instead, this project focuses on:
-- **reproducibility**
-- **clean code structure**
-- **clear data access instructions**
+---
+
+#### 🧠 Approach
+
+The recommendation system follows these steps:
+
+- Transform transactional data into a **basket (invoice-product) matrix**  
+- Convert quantities into a **binary format** (1 if purchased, 0 otherwise)  
+- Apply the **Apriori algorithm** to extract frequent itemsets  
+- Generate **association rules** using support, confidence, and lift metrics  
+- Rank rules based on **lift** to identify strong product relationships  
+
+---
+
+#### 📊 Key Concepts
+
+- **Support** → Frequency of itemset occurrence  
+- **Confidence** → Probability of purchasing item B given item A  
+- **Lift** → Strength of association between products (higher = stronger relationship)  
+
+---
+
+#### ⚙️ Recommendation Logic
+
+- For a given product:
+  - Find rules where the product appears in the **antecedent (left-hand side)**  
+  - Retrieve the corresponding **consequents (right-hand side)**  
+  - Sort by **lift** to prioritize stronger associations  
+  - Return top-N recommended products  
+
+---
+
+#### 🎯 Business Value
+
+This system enables:
+
+- Cross-selling opportunities (e.g., “Customers who bought this also bought…”)  
+- Improved product bundling strategies  
+- Increased average order value (AOV)  
+- More personalized shopping experiences  
+
+---
+
+#### 💡 Example Use Case
+
+If a customer purchases a specific product, the system can recommend complementary products based on historical co-purchase patterns.
+
+This makes the solution directly applicable to:
+- E-commerce recommendation engines  
+- Campaign targeting  
+- Product placement strategies  
