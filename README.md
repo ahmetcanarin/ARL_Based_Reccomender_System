@@ -10,9 +10,8 @@ Due to GitHub file size limitations and best practices in data science project s
 
 You can access the dataset from the official source below:
 
-- UCI Machine Learning Repository:  
-  https://archive.ics.uci.edu/ml/datasets/online+retail+ii
-
+- https://archive.ics.uci.edu/ml/datasets/online+retail+ii
+  
 ---
 
 ### 📊 Dataset Description
@@ -44,7 +43,7 @@ Before modeling, the dataset undergoes several preprocessing steps to ensure ana
 
 ### 🤖 Recommendation System (Association Rule Learning)
 
-After preprocessing, an **Association Rule Learning (ARL)**–based recommendation system is developed using the Apriori algorithm.
+After preprocessing, an **Association Rule Learning (ARL)**–based recommendation system is developed using the **Apriori Algorithm**.
 
 The goal is to identify products that are frequently purchased together and generate **data-driven product recommendations**.
 
